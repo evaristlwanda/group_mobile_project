@@ -1,0 +1,34 @@
+# Built files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Gradle files
+.gradle/
+build/
+app/build/
+*/build/
+
+# Local configuration files (e.g., IDE settings)
+.idea/
+*.iml
+*.swp
+.DS_Store
+
+# Keystore files (never commit these!)
+*.jks
+*.keystore
+
+# Firebase & Google Services config (if you use them)
+google-services.json
+google-services.json.*
+
+# Crashlytics (if used)
+fabric.properties
+
+# Logs
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/

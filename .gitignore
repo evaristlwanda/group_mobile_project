@@ -1,0 +1,110 @@
+# =====================================
+# Gradle files and build cache
+# =====================================
+.gradle/
+/build/
+caches/
+.tmp/
+.local/
+
+
+# Gradle wrapper logs
+hs_err_pid*.log
+
+# =====================================
+# Local configuration (sdk path, etc)
+# =====================================
+local.properties
+
+# =====================================
+# Log files
+# =====================================
+*.log
+
+# =====================================
+# Android Studio generated files and folders
+# =====================================
+.idea/
+*.iml
+*.ipr
+*.iws
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+.externalNativeBuild/
+.cxx/
+captures/
+output.json
+
+# =====================================
+# Application output files
+# =====================================
+*.apk
+*.ap_
+*.aab
+*.zip
+
+# =====================================
+# Compiled / Generated files
+# =====================================
+*.dex
+*.class
+bin/
+gen/
+out/
+
+# =====================================
+# Keystore files
+# =====================================
+*.jks
+*.keystore
+
+# =====================================
+# Google Services / Firebase
+# =====================================
+google-services.json
+
+# =====================================
+# Android Profiling and debugging
+# =====================================
+*.hprof
+.kotlinc/
+kotlin-profile/
+
+# =====================================
+# Native binaries
+# =====================================
+*.so
+
+# =====================================
+# Emulator / AVD files
+# =====================================
+*.avd/
+
+# =====================================
+# Crashlytics / Fabric
+# =====================================
+fabric.properties
+crashlytics.properties
+crashlytics-build.properties
+
+# =====================================
+# OS-specific files
+# =====================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+
+# =====================================
+# Editor swap files and cache
+# =====================================
+*.swp
+.cache/
+
+# =====================================
+# Node modules (if using React Native)
+# =====================================
+node_modules/
