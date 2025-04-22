@@ -15,5 +15,23 @@
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
+    <string name="user_profile">User Profile</string>
+    <string name="search_your_travel_mate">Search Your Travel mate</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="account">Account</string>
+    <string name="travel_buddy">Travel Buddy</string>
+    <string name="find_your_perfect_travel_buddy_with_us">Find Your Perfect Travel Buddy with Us</string>
+    <string name="buddy_image">buddy Image</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="travel_from">Travel from :</string>
+    <string name="travel_to">Travel to :</string>
+    <string name="find_your_buddies">Find Your Buddies</string>
+    <string name="your_buddies_are">Your Buddies Are :</string>
+    <string name="welcome_to_travel_buddy">Welcome To Travel Buddy</string>
+    <string name="fill_the_details_of_your_journey">Fill the details of Your Journey</string>
+    <string name="buddy_name">Buddy Name</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="profile">Profile</string>
 </resources>
