@@ -41,10 +41,16 @@ dependencies {
     implementation(libs.constraintlayout)
 
     // CardView dependency
-    implementation("androidx.cardview:cardview:1.0.0")
+    implementation(libs.cardview)
     implementation(libs.firebase.auth)
     implementation(libs.preference)
     implementation(libs.annotation.jvm)
+    implementation(libs.credentials)
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.googleid)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.storage)
 
     // Testing
     testImplementation(libs.junit)

@@ -24,12 +24,11 @@ public class SignUp extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private EditText signUpFullName, signUpEmail, signUpPassword, signUpConfirmPassword;
-    private Button signUpButton;
     private TextView tvAlreadyAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); // Corrected line
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_up);
 
@@ -39,7 +38,7 @@ public class SignUp extends AppCompatActivity {
         signUpEmail = findViewById(R.id.etEmail);
         signUpPassword = findViewById(R.id.etPassword);
         signUpConfirmPassword = findViewById(R.id.etConfirmPassword);
-        signUpButton = findViewById(R.id.btnSignUp);
+        Button signUpButton = findViewById(R.id.btnSignUp);
         tvAlreadyAccount = findViewById(R.id.tvAlreadyAccount);
 
         // Sign up button click

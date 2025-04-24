@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,12 +30,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class HomeFragment extends Fragment {
 
     private static final String TAG = "HomeFragment";
 
-    private RecyclerView myRecyclerView;
     private ListAdapter adapter;
     private List<ListItem> items;
 
@@ -47,7 +46,7 @@ public class HomeFragment extends Fragment {
     private TextInputLayout toTextInputLayout;
     private TextInputEditText fromEditText;
     private TextInputEditText toEditText;
-    private MaterialButton findBuddiesButton;
+    private RecyclerView myRecyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -62,7 +61,7 @@ public class HomeFragment extends Fragment {
         toTextInputLayout = view.findViewById(R.id.to);
         fromEditText = view.findViewById(R.id.text_from);
         toEditText = view.findViewById(R.id.text_to);
-        findBuddiesButton = view.findViewById(R.id.findBuddiesButton);
+        MaterialButton findBuddiesButton = view.findViewById(R.id.findBuddiesButton);
         myRecyclerView = view.findViewById(R.id.myRecyclerView);
 
         // Set up RecyclerView
@@ -88,8 +87,8 @@ public class HomeFragment extends Fragment {
     }
 
     private void saveUserDataAndFindBuddies() {
-        String from = fromEditText.getText().toString().trim();
-        String to = toEditText.getText().toString().trim();
+        String from = Objects.requireNonNull(fromEditText.getText()).toString().trim();
+        String to = Objects.requireNonNull(toEditText.getText()).toString().trim();
 
         if (TextUtils.isEmpty(from)) {
             fromTextInputLayout.setError("Please enter your starting location");
@@ -122,7 +121,7 @@ public class HomeFragment extends Fragment {
         userData.put("searchRoute", from + "-" + to); // Combine from and to for search route
 
         // Save user data to Firestore
-        firestore.collection("users")
+        firestore.collection("route")
                 .document(userId)
                 .set(userData)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -152,14 +151,14 @@ public class HomeFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             QuerySnapshot querySnapshot = task.getResult();
-                            if (!querySnapshot.isEmpty()) {
+                            if (querySnapshot != null && !querySnapshot.isEmpty()) {
                                 // Users found with the same search route
                                 List<String> buddies = new ArrayList<>();
                                 for (DocumentSnapshot document : querySnapshot.getDocuments()) {
                                     String buddyEmail = document.getString("email");
                                     String buddyFrom = document.getString("from");
                                     String buddyTo = document.getString("to");
-                                    if (buddyEmail != null && !buddyEmail.equals(auth.getCurrentUser().getEmail())) {
+                                    if (buddyEmail != null && !buddyEmail.equals(Objects.requireNonNull(auth.getCurrentUser()).getEmail())) {
                                         buddies.add(buddyEmail + " (From: " + buddyFrom + ", To: " + buddyTo + ")");
                                     }
                                 }

@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#FF0000FF</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="gray">#808080</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="my_green">#4CAF50</color> <!-- A common shade of green -->
+    <color name="light_green">#81C784</color>
+    <color name="dark_green">#388E3C</color>
+    <color name="emerald_green">#50C878</color>
+    <color name="forest_green">#228B22</color>
 </resources>

@@ -5,7 +5,8 @@
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
-
+    <string name="enter_message">Enter message</string>
+    <string name="send">Send</string>
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
@@ -34,4 +35,19 @@
     <string name="buddy_name">Buddy Name</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="profile">Profile</string>
+    <string name="unknown_sender">Unknown Sender</string>
+    <string name="chat">chat</string>
+    <string name="chats">Chats</string>
+    <string name="contact">Contact</string>
+    <string name="about_us">About Us</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="remove">Remove</string>
+    <string name="account_information">Account Information</string>
+    <string name="username_johndoe123">Username: johndoe123</string>
+    <string name="email_john_example_com">Email: john@example.com</string>
+    <string name="additional_information">Additional Information</string>
+    <string name="tell_us_about_yourself">Tell us about yourself...</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="profile_">Profile</string>
+    <string name="username_john_doe123">username_john_doe123</string>
 </resources>

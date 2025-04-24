@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(AuthResult authResult) {
                                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(MainActivity.this, HomeActivity.class)); // Replace with your actual dashboard
+                                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
                                     finish();
                                 }
                             })
